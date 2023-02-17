@@ -11,3 +11,8 @@ class TestAuthor (unittest.TestCase):
         expected = "Adam"
         actual = self.author.first_name
         self.assertEqual(expected, actual)
+
+    def test_author_has_last_name(self):
+        expected = "Kay"
+        actual = self.author.last_name
+        self.assertEqual(expected, actual)
