@@ -26,3 +26,9 @@ class TestBook (unittest.TestCase):
         expected = False
         actual = self.book.completed
         self.assertEqual(expected, actual)
+
+    def test_book_can_mark_book_as_complete(self):
+        self.book.mark_completed()
+        expected = True
+        actual = self.book.completed
+        self.assertEqual(expected, actual)
