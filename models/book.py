@@ -1,7 +1,6 @@
 class Book: 
-    def __init__(self, title, genre, author, completed = False, id = None):
+    def __init__(self, title, author, completed = False, id = None):
         self.title = title
-        self.genre = genre
         self.author = author
         self.completed = completed
         self.id = id
