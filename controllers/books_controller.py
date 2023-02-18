@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request, redirect
-from repositories import book_repository, author_repository
+
 from models.book import Book
+
+import repositories.book_repository as book_repository
+import repositories.author_repository as author_repository
+
 
 from flask import Blueprint
 
@@ -11,7 +15,7 @@ books_blueprint = Blueprint("books", __name__)
 # INDEX
 # GET - homepage '/'
 
-# !!!!!!!! this will need to be changed later - for the purpose of making sure it works
-# @books_blueprint.route('/')
-# def book():
-#     books = book_repository.
+@books_blueprint.route('/books')
+def books():
+    books = book_repository.select_all()
+    return render_template('test.html', all_books = books)
