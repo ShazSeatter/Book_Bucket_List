@@ -1,8 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>this is the index page</h1>
-{% for book in books %}
-{% endfor %}
+    <header>
+        <h1>2023 Reading Goal</h1>
+    </header>
+    <section>
+        <div class="container">
+
+            <div>
+                <p>3</p>
+                <p>in TBR</p>
+            </div>
+            <div>
+                <p>10</p>
+                <p>in Goal</p>
+            </div>
+            <div>
+                <p>2</p>
+                <p>in Read
+                </p>
+            </div>
+
+        </div>
+    
+        <div>
+            <button><a href="/books">View</a></button>
+        </div>
+    </section>
 
 {% endblock %}

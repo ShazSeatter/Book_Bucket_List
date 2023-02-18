@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>this is the view all books page</h1>
+<button><a href="/">Home</a></button>
+{% for book in all_books %}
+    <p>Title</p>
+        {{book.title}}
+    <p>Author</p>
+        {{book.author.full_name()}}
+    <p>Completed?</p>
+    {% if book.completed %}
+        <span> &#9989;</span>
+    {% else %}
+        <span>&#10060;</span>
+    {% endif %}
+
+    <form action="/books/{{id}}" methods="POST">
+        <label for="completed">
+            <p>testing</p>
+        </label>
+
+    </form>
+    <hr>
+
+{% endfor %}
+
+<button><a href="/books/new">Add A Book</a></button>
+<button><a href="/books/authors/new">Add Author</a></button>
+{% endblock %}
