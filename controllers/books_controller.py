@@ -58,6 +58,29 @@ def new_book():
 def create_book():
     title = request.form['title']
     author = author_repository.select(request.form['author_id'])
-    book = Book(title, author)
+    completed = True if 'completed' in request.form else False
+    book = Book(title, author, completed)
     book_repository.save(book)
+    return redirect('/books')
+
+
+# EDIT
+# GET 'books/<id>/edit'
+
+
+
+# UPDATE
+@books_blueprint.route('/books/<id>', methods=["POST"])
+def books_update(id):
+    book = book_repository.select(id)
+    completed = "completed" in request.form
+    book.mark_completed(completed)
+    return redirect('/books')
+
+
+# DELETE
+@books_blueprint.route('/books/<id>/delete', methods=["POST"])
+def delete_book(id):
+    book_repository.delete()
+    # author_repository.delete(id)
     return redirect('/books')

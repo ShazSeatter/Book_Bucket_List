@@ -6,5 +6,7 @@ class Book:
         self.id = id
 
 
-    def mark_completed(self):
-        self.completed = True
+    def mark_completed(self, completed):
+        self.completed = completed
+
+    

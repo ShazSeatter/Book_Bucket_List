@@ -15,14 +15,19 @@
         <span>&#10060;</span>
     {% endif %}
 
-    <form action="/books/{{id}}" methods="POST">
-        <label for="completed">
-            <p>testing</p>
-        </label>
-
+    <form action="/books/{{book.id}}" methods="POST">
+        <label for="completed">  </label>
+            <span>Finished Book?</span>
+            <input type="checkbox" name="completed" id="completed" value="true" {{ "checked" if book.completed}}>
+      
+        <input type="submit" value="Update">
     </form>
-    <hr>
+    
 
+    <form class="delete-form" action="/books/{{book.id}}/delete" method="POST">
+        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+    </form>
+<hr>
 {% endfor %}
 
 <button><a href="/books/new">Add A Book</a></button>

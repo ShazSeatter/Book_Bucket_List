@@ -1,0 +1,51 @@
+body {
+    background-color: #fefbe9;
+}
+
+header {
+    margin-top: 20px; 
+    font-family: 'Maven Pro', sans-serif;
+    color: #f0a04b;
+    display: flex;
+    justify-content: center;
+}
+
+header > h1 {
+    font-weight: 700;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.section-container {
+    margin-top: 20px; 
+    text-align: center;
+    color: #183a1d;
+    font-family: 'Comfortaa', cursive;;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-main {
+    background-color: #183a1d;
+    border: none; 
+    border-radius: 0.3rem;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    margin-top: 20px; 
+}
+
+.btn-main > a {
+    text-decoration: none;
+    color: #ffff; 
+
+}
+
+.btn-main > a:visted {
+    color: white; 
+
+}
