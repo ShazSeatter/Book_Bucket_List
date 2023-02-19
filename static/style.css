@@ -93,10 +93,13 @@ header > h1 {
 
 /* BOOKS INDEX PAGE */
 
+
 .saved-books-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
+
 }
 
 .book-page-header {
@@ -118,13 +121,15 @@ header > h1 {
     padding: 3rem; 
     border-radius: 0.2rem;
     font-family: 'Comfortaa', cursive;
+    box-shadow: 7px 9px 14px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+    flex-basis: 0;
 }
 
 .book-tags {
     color:#183a1d;
     margin: 0.5rem 0 0.5rem 0;
     font-size: 16px;
-    /* text-decoration: underline; */
+
 }
 
 .book-font-size {
@@ -134,9 +139,31 @@ header > h1 {
 
 .extra-margin {
     margin-top: 2rem; 
+} 
+
+
+.card__footer {
+    display: flex;
+    gap: 0.5rem;
 }
 
+.footer-btn {
+    margin-top: 1rem;
+    border: none; 
+    border-radius: 0.3rem;
+    font-family: 'Comfortaa', cursive;
+    padding: 0.5rem;
+    font-size: 10px;
+    color: white;
+}
 
+.completed-btn {
+    background-color: #183a1d;
+}
+
+.trash-btn {
+    background-color: red;
+}
 
 /* ADDING NEW BOOK - HTML PAGE */
 

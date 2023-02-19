@@ -12,8 +12,8 @@
         <div class="saved-books-container">
             {% for book in all_books %}
             <div class="book">
-            <!-- NEED TO FIX THIS - FONT AWESOME NOT WORKING -->
-                    <h3 class="book-tags">Tile</h3> 
+            <!-- edit out later NEED TO FIX THIS - FONT AWESOME NOT WORKING -->
+                    <h3 class="book-tags">Title</h3> 
                     <p class="book-font-size">{{book.title}}</p>
 
                     <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
@@ -24,16 +24,15 @@
                     {% else %}
                         <span>&#10060;</span>
                     {% endif %}
-                    <form action="/books/{{book.id}}" methods="POST">
-                        <label for="completed">  </label>
-                            <span class="book-tags book-font-size">Finished Book?</span>
-                            <input type="checkbox" name="completed" id="completed" value="true" {{ "checked" if book.completed}}>
-                        <input type="submit" value="Update">
-                    </form>
-                    <form class="delete-form" action="/books/{{book.id}}/delete" method="POST">
-                        <button class="trash-button">Delete</button>
-                    </form>
-
+                    
+                    <div class="card__footer">
+                        <form class="completed-form" action="" method="POST">
+                            <button class="footer-btn completed-btn">Completed?</button>
+                        </form>
+                        <form class="delete-form" action="/books/{{book.id}}/delete" method="POST">
+                            <button class="footer-btn trash-btn">Delete</button>
+                        </form>
+                    </div>
             </div>
         {% endfor %}
     <div>
@@ -41,4 +40,7 @@
 
 
 </section>
+
 {% endblock %}
+
+
