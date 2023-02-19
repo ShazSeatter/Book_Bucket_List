@@ -2,7 +2,9 @@
 
 
 {% block content %}
-
+<button class="btn-main"><a href="/">Home</a></button>
+<button class="btn-main"><a href="/books">View All Books</a></button>
+<button class="btn-main"><a href="/authors">View All Authors</a></button>
 <form action="/books" method="post">
     <div>
         <label for="title">Title:</label>
@@ -21,6 +23,6 @@
         <label for="checked_out">Completed?</label>
         <input type="checkbox" name="completed" id="completed">
     
-    <button type="submit">Add Book</button>
+    <button class="btn-main" type="submit">Add Book</button>
 </form>
 {% endblock %}

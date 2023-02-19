@@ -2,7 +2,9 @@
 
 
 {% block content %}
-
+<button class="btn-main"><a href="/">Home</a></button>
+<button class="btn-main"><a href="/books">View All Books</a></button>
+<button class="btn-main"><a href="/authors">View All Authors</a></button>
 <form action="/authors" method="post">
     <h4>Author Info</h4>
     <div>
@@ -15,12 +17,7 @@
         <input type="text" name="last-name" id="last-name" placeholder="Last Name" required autofocus>
     </div>
 
-    <button type="submit"> Add Author</button>
+    <button class="btn-main" type="submit"> Add Author</button>
 
-    <!-- <select name="author_id" id="author">
-        {% for author in all_authors %}
-            <option value="{{ author.id }}">{{ author.full_name() }}</option> -->
-        {% endfor %}
-    </select>
 </form>
 {% endblock %}
