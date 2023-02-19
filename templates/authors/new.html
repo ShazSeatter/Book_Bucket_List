@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<form action="/books" method="post">
+<form action="/authors" method="post">
     <h4>Author Info</h4>
     <div>
         <label for="first-name">First Name:</label>
@@ -17,9 +17,9 @@
 
     <button type="submit"> Add Author</button>
 
-    <select name="author_id" id="author">
+    <!-- <select name="author_id" id="author">
         {% for author in all_authors %}
-            <option value="{{ author.id }}">{{ author.full_name() }}</option>
+            <option value="{{ author.id }}">{{ author.full_name() }}</option> -->
         {% endfor %}
     </select>
 </form>

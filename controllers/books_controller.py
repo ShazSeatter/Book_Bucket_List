@@ -21,27 +21,6 @@ def books():
     books = book_repository.select_all()
     return render_template('books/index.html', all_books = books)
 
-# CRUD FUNCTIONALITY FOR CREATING NEW AUTHOR 
-
-# # NEW
-# # GET 'author/new'
-# @books_blueprint.route('/books/authors/new')
-# def new_author():
-#     authors = author_repository.select_all()
-#     return render_template('authors/new.html', all_authors = authors)
-
-
-# # CREATE
-# # POST '/books'
-# @books_blueprint.route('/books', methods=['POST'])
-# def create_author():
-#    first_name = request.form['first-name']
-#    last_name = request.form['last-name']
-#    author = Author(first_name, last_name)
-#    author_repository.save(author)
-#    return redirect('/books')
-
-
 
 # NEW BOOK
 
