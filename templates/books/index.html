@@ -12,12 +12,11 @@
         {% for book in all_books %}
         <div class="book">
                 <h3 class="book-tags">Title</h3>
-                <p>{{book.title}}</p>
+                <p class="book-font-size">{{book.title}}</p>
 
-                <h3 class="book-tags">Author</h3>
-                <p>{{book.author.full_name()}}</p>
-    
-                <h3 class="book-tags">Completed?</h3>
+                <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
+  
+                <h3 class="book-tags extra-margin book-font-size">Completed?</h3>
                 {% if book.completed %}
                     <span> &#9989;</span>
                 {% else %}
@@ -25,7 +24,7 @@
                 {% endif %}
                 <form action="/books/{{book.id}}" methods="POST">
                     <label for="completed">  </label>
-                        <span>Finished Book?</span>
+                        <span class="book-tags book-font-size">Finished Book?</span>
                         <input type="checkbox" name="completed" id="completed" value="true" {{ "checked" if book.completed}}>
                     <input type="submit" value="Update">
                 </form>

@@ -6,13 +6,15 @@
 <button class="btn-main"><a href="/books">View All Books</a></button>
 <button class="btn-main"><a href="/authors">View All Authors</a></button>
 <form action="/books" method="post">
+
+    <h1 class="new-book-heading">Add A Book Here</h1>
     <div>
-        <label for="title">Title:</label>
+        <label class="book-tags" for="title">Title:</label>
         <input type="text" name="title" id="title" placeholder="Title" required autofocus>
     </div>
 
     <div>
-        <label for="author">Author:</label>
+        <label class="book-tags" for="author">Author:</label>
         <select name="author_id" id="author">
             {% for author in all_authors %}
                 <option value="{{ author.id }}">{{ author.full_name() }}</option>
@@ -20,7 +22,7 @@
         </select>
     </div>
 
-        <label for="checked_out">Completed?</label>
+        <label class="book-tags" for="checked_out">Completed?</label>
         <input type="checkbox" name="completed" id="completed">
     
     <button class="btn-main" type="submit">Add Book</button>
