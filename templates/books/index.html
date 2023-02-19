@@ -2,45 +2,43 @@
 
 {% block content %}
 <!-- displaying book cards on page  -->
-<button class="btn-main"><a href="/">Home</a></button>
-<button class="btn-main"><a href="/authors">View All Authors</a></button>
-    <header>
+    <header class="book-page-header">
         <h1>List of Books</h1>
     </header>
-<section class="books-card-section"> 
-    <div class="saved-books-container">
-        {% for book in all_books %}
-        <div class="book">
-                <h3 class="book-tags">Title</h3>
-                <p class="book-font-size">{{book.title}}</p>
+    <div class="add-book-btn">
+        <button class="btn-main"><a href="/books/new">Add A Book</a></button>
+    </div>
+    <section class="books-card-section"> 
+        <div class="saved-books-container">
+            {% for book in all_books %}
+            <div class="book">
+            <!-- NEED TO FIX THIS - FONT AWESOME NOT WORKING -->
+                    <h3 class="book-tags">Tile</h3> 
+                    <p class="book-font-size">{{book.title}}</p>
 
-                <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
-  
-                <h3 class="book-tags extra-margin book-font-size">Completed?</h3>
-                {% if book.completed %}
-                    <span> &#9989;</span>
-                {% else %}
-                    <span>&#10060;</span>
-                {% endif %}
-                <form action="/books/{{book.id}}" methods="POST">
-                    <label for="completed">  </label>
-                        <span class="book-tags book-font-size">Finished Book?</span>
-                        <input type="checkbox" name="completed" id="completed" value="true" {{ "checked" if book.completed}}>
-                    <input type="submit" value="Update">
-                </form>
-                <form class="delete-form" action="/books/{{book.id}}/delete" method="POST">
-                    <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-                </form>
+                    <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
+    
+                    <h3 class="book-tags extra-margin book-font-size">Completed?</h3>
+                    {% if book.completed %}
+                        <span> &#9989;</span>
+                    {% else %}
+                        <span>&#10060;</span>
+                    {% endif %}
+                    <form action="/books/{{book.id}}" methods="POST">
+                        <label for="completed">  </label>
+                            <span class="book-tags book-font-size">Finished Book?</span>
+                            <input type="checkbox" name="completed" id="completed" value="true" {{ "checked" if book.completed}}>
+                        <input type="submit" value="Update">
+                    </form>
+                    <form class="delete-form" action="/books/{{book.id}}/delete" method="POST">
+                        <button class="trash-button">Delete</button>
+                    </form>
 
-        </div>
+            </div>
         {% endfor %}
     <div>
 
 
 
 </section>
-
-        <div class="footer-add-btn">
-            <button class="btn-main"><a href="/books/new">Add A Book</a></button>
-        </div>
 {% endblock %}
