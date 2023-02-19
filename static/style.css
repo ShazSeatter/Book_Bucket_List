@@ -51,7 +51,10 @@ header > h1 {
     color: #ffff; 
 
 }
+.btn-main > a:hover {
+    text-decoration: underline;
 
+}
 .btn-main > a:visted {
     color: white; 
 
