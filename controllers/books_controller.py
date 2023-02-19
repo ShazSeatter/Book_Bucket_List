@@ -59,6 +59,6 @@ def books_update(id):
 
 # DELETE
 @books_blueprint.route('/books/<id>/delete', methods=["POST"])
-def delete(id):
+def delete_book(id):
     book_repository.delete(id)
     return redirect('/books')
