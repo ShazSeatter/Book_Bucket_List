@@ -1,35 +1,47 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>this is the view all books page</h1>
-<button><a href="/">Home</a></button>
-{% for book in all_books %}
-    <p>Title</p>
-        {{book.title}}
-    <p>Author</p>
-        {{book.author.full_name()}}
-    <p>Completed?</p>
-    {% if book.completed %}
-        <span> &#9989;</span>
-    {% else %}
-        <span>&#10060;</span>
-    {% endif %}
+<!-- displaying book cards on page  -->
+<button class="btn-main"><a href="/">Home</a></button>
+    <header>
+        <h1>List of Books</h1>
+    </header>
+<section class="books-card-section"> 
+    <div class="saved-books-container">
+        {% for book in all_books %}
+        <div class="book">
+                <h3 class="book-tags">Title</h3>
+                <p>{{book.title}}</p>
 
-    <form action="/books/{{book.id}}" methods="POST">
-        <label for="completed">  </label>
-            <span>Finished Book?</span>
-            <input type="checkbox" name="completed" id="completed" value="true" {{ "checked" if book.completed}}>
-      
-        <input type="submit" value="Update">
-    </form>
+                <h3 class="book-tags">Author</h3>
+                <p>{{book.author.full_name()}}</p>
     
+                <h3 class="book-tags">Completed?</h3>
+                {% if book.completed %}
+                    <span> &#9989;</span>
+                {% else %}
+                    <span>&#10060;</span>
+                {% endif %}
+                <form action="/books/{{book.id}}" methods="POST">
+                    <label for="completed">  </label>
+                        <span>Finished Book?</span>
+                        <input type="checkbox" name="completed" id="completed" value="true" {{ "checked" if book.completed}}>
+                    <input type="submit" value="Update">
+                </form>
+                <form class="delete-form" action="/books/{{book.id}}/delete" method="POST">
+                    <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+                </form>
 
-    <form class="delete-form" action="/books/{{book.id}}/delete" method="POST">
-        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-    </form>
-<hr>
-{% endfor %}
+        </div>
+        {% endfor %}
+    <div>
 
-<button><a href="/books/new">Add A Book</a></button>
-<button><a href="/books/authors/new">Add Author</a></button>
+
+
+</section>
+
+        <div class="footer-add-btn">
+            <button><a href="/books/new">Add A Book</a></button>
+            <button><a href="/books/authors/new">Add Author</a></button> 
+        </div>
 {% endblock %}

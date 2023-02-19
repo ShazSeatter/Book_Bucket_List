@@ -3,7 +3,7 @@ body {
 }
 
 
-header {
+.main-header {
     margin-top: 20px; 
     font-family: 'Maven Pro', sans-serif;
     color: #f0a04b;
@@ -30,7 +30,7 @@ header > h1 {
 .section-container {
     text-align: center;
     color: #183a1d;
-    font-family: 'Comfortaa', cursive;;
+    font-family: 'Comfortaa', cursive;
 }
 
 .btn-container {
@@ -58,4 +58,32 @@ header > h1 {
 .btn-main > a:visted {
     color: white; 
 
+}
+
+
+
+/* BOOKS INDEX PAGE */
+
+.saved-books-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book {
+    margin: 2rem;
+    background-color:#e1eedd;
+    padding: 3rem; 
+    border-radius: 0.2rem;
+    font-family: 'Comfortaa', cursive;
+}
+
+.book-tags {
+    color:#183a1d;
+    margin: 0.5rem 0 0.5rem 0;
+    text-decoration: underline;
+}
+
+.book-tags > p {
+    font-size: small;
 }
