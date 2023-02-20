@@ -36,3 +36,21 @@ def create_author():
    author = Author(first_name, last_name)
    author_repository.save(author)
    return redirect('/authors')
+
+
+# EDIT
+# GET 'authors/<id>/edit'
+@authors_blueprint.route('/authors/<id>/edit')
+def edit_authors(id):
+    author = author_repository.select(id)
+    return render_template('/authors/edit.html', author = author)
+
+# UPDATE
+# POST '/authors/<id>'
+@authors_blueprint.route('/authors/<id>', methods=["POST"])
+def update_author(id):
+    first_name = request.form['first-name']
+    last_name = request.form['last-name']
+    author = Author(first_name, last_name, id)
+    author_repository.update(author)
+    return redirect('/authors')

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="edit-author-form">
+        <form action="/authors/{{author.id}}" method="POST">
+            <div>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" value="{{author.first_name}}" required autofocus>
+            </div>
+            <div>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" value="{{author.last_name}}" required>
+            </div>
+            <button class="btn-main">Update Author</a></button> 
+        </form>
+    </div>
+{% endblock %}

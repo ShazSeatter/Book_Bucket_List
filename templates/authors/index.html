@@ -6,7 +6,7 @@
 {% for author in all_authors %}
 <ul>
     <li>
-        {{author.full_name()}}
+        <a href="/authors/{{author.id}}/edit">{{author.full_name()}}</a>
     </li>
 </ul>
 {% endfor %}
