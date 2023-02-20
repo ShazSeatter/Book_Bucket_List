@@ -69,7 +69,8 @@ header > h1 {
     padding: 0.7rem 1rem 0.7rem 1rem;
     margin-top: 20px; 
     color: #ffff;
-    transition: background-color ease-out 50ms
+    transition: background-color ease-out 50ms;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .btn-main.btn-main:hover {
@@ -219,7 +220,18 @@ header > h1 {
 
 /* AUTHORS INDEX PAGE */
 
-.add-author-form {
-    display: flex;
-    justify-content: center;
+.author-page-heading {
+    margin-top: 3.3rem;
+    margin-left: 2rem;
+    font-family: 'Maven Pro', sans-serif;
+    color:#f0a04b;
+}
+.author-index-page-links {
+     list-style: none;
+}
+
+.author-index-page {
+   text-decoration: none;
+   color:#183a1d;
+   font-family: 'Comfortaa', cursive;
 }
