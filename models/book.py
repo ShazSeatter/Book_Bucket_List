@@ -9,4 +9,3 @@ class Book:
     def mark_completed(self, completed):
         self.completed = completed
 
-    

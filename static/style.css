@@ -177,7 +177,6 @@ header > h1 {
 }
 
 
-
 .completed-btn {
     background-color: #183a1d;
 }
@@ -197,6 +196,13 @@ header > h1 {
     border-top: solid;
     border-bottom: solid;
 }
+
+.img {
+    background: url('/static/img/book.jpg');
+    width: 30%;
+    height: 30%;
+}
+
 
 /* ADDING NEW BOOK - HTML PAGE */
 
