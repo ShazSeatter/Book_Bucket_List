@@ -69,9 +69,11 @@ header > h1 {
     padding: 0.7rem 1rem 0.7rem 1rem;
     margin-top: 20px; 
     color: #ffff;
+    transition: background-color 0.5s ease-out 50ms
 }
 
 .btn-main.btn-main:hover {
+    background-color:#304933;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -83,7 +85,6 @@ header > h1 {
 }
 .btn-main > a:hover {
     text-decoration: underline;
-
 }
 .btn-main > a:visted {
     color: white; 

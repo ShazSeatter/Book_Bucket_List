@@ -42,17 +42,27 @@ def create_book():
     book_repository.save(book)
     return redirect('/books')
 
+# SHOW
+# GET '/books/<id>
+@books_blueprint.route('/books/<id>/show')
+def show_book(id):
+    book = book_repository.select(id)
+    return render_template('books/show.html', book = book)
+
 
 # EDIT
 # GET 'books/<id>/edit'
-
-
+@books_blueprint.route('/books/<id>/edit')
+def edit_books(id):
+    authors = author_repository.select_all()
+    book = book_repository.select(id)
+    return render_template('/books/edit.html', all_authors = authors, book = book)
 
 # UPDATE
-@books_blueprint.route('/books/<id>', methods=["POST"])
+@books_blueprint.route('/books/<id>/update', methods=["POST"])
 def books_update(id):
     book = book_repository.select(id)
-    completed = "completed" in request.form
+    completed = True if 'completed' in request.form else False
     book.mark_completed(completed)
     return redirect('/books')
 

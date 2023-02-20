@@ -36,13 +36,13 @@ def select(id):
     if results:
         result = results[0]
         author = author_repository.select(result['author_id'])
-        book = Book(result['title'], author, result['id'])
-    
+        book = Book(result['title'], author, result['completed'], result['id'])
+
     return book 
 
 def update(book):
     sql = "UPDATE books SET (title, author_id, completed) = (%s, %s, %s) WHERE id = %s"
-    values = [book.title, book.author.id, book.compelted, book.id]
+    values = [book.title, book.author.id, book.completed, book.id]
     print(values)
     run_sql(sql, values)
 
