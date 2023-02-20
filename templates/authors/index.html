@@ -9,7 +9,7 @@
 {% for author in all_authors %}
 <ul class="author-index-page-links">
     <li>
-        <a class="author-index-page" href="/authors/{{author.id}}/edit">{{author.full_name()}}</a>
+        <a class="author-index-page" href="/authors/{{author.id}}/edit">{{author.full_name()}} <i class="fa fa-pencil" aria-hidden="true"></i></a>
     </li>
 </ul>
 {% endfor %}
