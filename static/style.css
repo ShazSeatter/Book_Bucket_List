@@ -1,3 +1,8 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+
 body {
     background-color: #fefbe9;
     margin: 0;
@@ -40,6 +45,18 @@ header > h1 {
     font-weight: 700;
 }
 
+input[type=number] {
+    background-color: #e1eedd;
+    padding: 10px 10px 10px 0px;
+    width: 103px;
+}
+
+input {
+    appearance: none;
+    border: none;
+}
+
+
 .container {
     display: flex;
     justify-content: center;
@@ -56,6 +73,11 @@ header > h1 {
     text-align: center;
     color: #183a1d;
     font-family: 'Comfortaa', cursive;
+}
+
+.margin-top {
+    margin-top: 12px;
+    text-align: left;
 }
 
 .btn-container {
@@ -91,6 +113,10 @@ header > h1 {
 .btn-main > a:visted {
     color: white; 
 
+}
+
+.btn-margin-main-page {
+    margin-top: 3rem;
 }
 
 
