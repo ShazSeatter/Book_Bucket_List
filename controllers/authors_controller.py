@@ -13,7 +13,7 @@ authors_blueprint = Blueprint("authors", __name__)
 @authors_blueprint.route('/authors')
 def authors():
     authors = author_repository.select_all()
-    return render_template('authors/index.html', all_authors = authors)
+    return render_template('authors/index.html', title = "Authors", all_authors = authors)
 
 
 # CRUD FUNCTIONALITY FOR CREATING NEW AUTHOR 
@@ -23,7 +23,7 @@ def authors():
 @authors_blueprint.route('/authors/new')
 def new_author():
     authors = author_repository.select_all()
-    return render_template('authors/new.html', all_authors = authors)
+    return render_template('authors/new.html', title = "Add Author", all_authors = authors)
 
 
 # CREATE
@@ -42,7 +42,7 @@ def create_author():
 @authors_blueprint.route('/authors/<id>/edit')
 def edit_authors(id):
     author = author_repository.select(id)
-    return render_template('/authors/edit.html', author = author)
+    return render_template('/authors/edit.html', title = "Edit Author", author = author)
 
 # UPDATE
 # POST '/authors/<id>'
