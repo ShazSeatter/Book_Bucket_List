@@ -46,16 +46,12 @@ header > h1 {
 }
 
 input[type=number] {
+    appearance: none;
+    border: none;
     background-color: #e1eedd;
     padding: 10px 10px 10px 0px;
     width: 103px;
 }
-
-input {
-    appearance: none;
-    border: none;
-}
-
 
 .container {
     display: flex;
@@ -149,6 +145,7 @@ input {
     text-decoration: none;
     color:#183a1d;
 }
+
 .book {
     margin: 2rem;
     background-color:#e1eedd;
@@ -206,14 +203,67 @@ input {
 }
 
 
-.completed-btn {
-    background-color: #183a1d;
+.completed-status {
+    margin-top: 0.5rem;
 }
 
+
 .trash-btn {
-    background-color: red;
+    background-color: rgb(243, 78, 78);
     cursor: pointer;
 }
+
+/* ADDING A NEW BOOK / NEW AUTHOR */
+
+.add-new-container {
+    background-color:rgb(225, 238, 221, 0.5);
+    width: 300px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    display: flex; 
+    flex-wrap: wrap;
+    border-radius: 0.2rem;
+}
+
+.new-book-heading {
+    font-family: 'Maven Pro', sans-serif;
+    color: #f0a04b;
+    margin-top: 2.5rem;
+    margin-left: 5.5rem;
+}
+
+
+input[type=text] {
+    appearance: none;
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.title-input {
+    margin-top: 0.5rem;
+}
+.add-author-select {
+    margin: 1rem 0 1rem 0;
+}
+
+.add-author-select > select {
+    margin-top: 0.5rem;
+}
+
+select {
+    /* appearance: none; */
+    outline: 0;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+
 
 /* SHOWING INDIVIDAUL BOOK */
 
@@ -238,12 +288,6 @@ input {
     margin-left: 0.5rem;
     font-size: 11px;
 }
-/* ADDING NEW BOOK - HTML PAGE */
-
-.new-book-heading {
-    font-family: 'Maven Pro', sans-serif;
-    color: #f0a04b;
-}
 
 
 /* AUTHORS INDEX PAGE */
@@ -259,8 +303,8 @@ input {
     font-family: 'Maven Pro', sans-serif;
     color:#f0a04b;
     font-size: 2.4em;
-
 }
+
 .author-index-page-links {
      list-style: none;
 }

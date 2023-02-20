@@ -24,11 +24,11 @@
 
                     <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
 
-                    <div>
+                    <div class="completed-status">
                         {% if book.completed %}
-                            <span> &#9989;</span>
+                            <span> Done &#9989;</span>
                         {%else%}
-                            <span>still TBR...</span>
+                            <span>still TBR... <i class="fa fa-hourglass-o" aria-hidden="true"></i></span>
                         {% endif %} 
                     </div>
  
