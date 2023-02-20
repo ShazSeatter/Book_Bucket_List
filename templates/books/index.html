@@ -11,30 +11,27 @@
     <section class="books-card-section"> 
         <div class="saved-books-container">
             {% for book in all_books %}
-            <div class="book"><a href="/books/{{book.id}}/show">
-            <!-- edit out later NEED TO FIX THIS - FONT AWESOME NOT WORKING -->
-                    <h3 class="book-tags">Title</h3> 
+<!-- DELETE BTN -->
+            <div class="book grow"><a class="book-card" href="/books/{{book.id}}/show">
+                <div class="card__btn-header">
+                    <form class="delete-form" action="/books/{{ book.id }}/delete" method="POST">
+                        <button type="submit" class="footer-btn trash-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+<!-- END - DELETE BTN -->
+                    <h3 class="book-tags"><i class="fa fa-book fa-3x"></i></h3> 
                     <p class="book-font-size">{{book.title}}</p>
 
                     <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
 
-
-                    <!-- <h3 class="book-tags extra-margin book-font-size">Completed?</h3>
-                    {% if book.completed %}
-                        <span> &#9989;</span>
-                    {% else %}
-                        <span>&#10060;</span>
-                    {% endif %}  -->
-
-                    <div class="card__footer">
-                        <form class="completed-form" action="/books/{{ book.id }}/update" method="POST">
-                            <button type="submit" class="footer-btn completed-btn">Completed?</button>
-                        </form>
-
-                        <form class="delete-form" action="/books/{{ book.id }}/delete" method="POST">
-                            <button type="submit" class="footer-btn trash-btn">Delete</button>
-                        </form>
+                    <div>
+                        {% if book.completed %}
+                            <span> &#9989;</span>
+                        {%else%}
+                            <span>still TBR...</span>
+                        {% endif %} 
                     </div>
+ 
                 </a></div>
 
         {% endfor %}

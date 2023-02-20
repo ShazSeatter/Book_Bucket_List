@@ -41,6 +41,7 @@ def select(id):
         author = Author(result['first_name'], result['last_name'], result['id'])
     return author
 
+
 def delete_all():
     sql = "DELETE FROM authors"
     run_sql(sql)
@@ -50,4 +51,18 @@ def delete(id):
     sql = "DELETE FROM authors WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+
+def find_book(author):
+    books = []
+    sql = "SELECT * FROM books WHERE author_id = %s"
+    values = [author.id]
+    results = run_sql(sql, values)
+
+    if results:
+        for row in results:
+            book = Book(row['title'], author, row['author_id'], row['completed'],row['id'])
+            books.append(book)
+            print(books)
+    return books
 

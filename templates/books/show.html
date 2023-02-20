@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div>
-        <h3 class="book-tags">Title</h3> 
+
+    <div class="show-individual-book">
+        <h3 class="book-tags"><i class="fa fa-bookmark" aria-hidden="true"></i></h3> 
         <p class="book-font-size">{{book.title}}</p>
 
         <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
+        <br>
         <button class="btn-main"><a href="/books/{{book.id}}/edit">Edit Book</a></button> 
     </div>
+
 {% endblock %}

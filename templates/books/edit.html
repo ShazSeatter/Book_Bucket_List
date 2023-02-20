@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block contenet %}
+{% block content %}
 
 <div class="edit-book-form">
     <form action="/books/{{book.id}}" method="POST">
@@ -17,6 +17,16 @@
                         {{ author.full_name()}}
                     </option>
                 {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="completed">Completed?</label>
+            <select name="completed" id="completed">
+                <option value="true" {% if book.completed == True %}
+                selected = "selected"{% endif %}>Yes</option>
+                <option value="false" {% if book.completed == False %} selected="selected"{% endif %}>
+                    No, still TBR
+                </option>
             </select>
         </div>
         <button class="btn-main">Update Book</a></button> 

@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from models.author import Author
 
 import repositories.author_repository as author_repository
+import repositories.book_repository as book_repository
 
 from flask import Blueprint
 
@@ -13,8 +14,6 @@ authors_blueprint = Blueprint("authors", __name__)
 def authors():
     authors = author_repository.select_all()
     return render_template('authors/index.html', all_authors = authors)
-
-
 
 
 # CRUD FUNCTIONALITY FOR CREATING NEW AUTHOR 
@@ -53,4 +52,14 @@ def update_author(id):
     last_name = request.form['last-name']
     author = Author(first_name, last_name, id)
     author_repository.update(author)
+    return redirect('/authors')
+
+
+# 
+
+# DELETE
+@authors_blueprint.route('/authors/<id>/delete', methods=["POST"])
+def delete_author(id):
+    # book = author_repository.books(id)
+    author_repository.delete(id)
     return redirect('/authors')

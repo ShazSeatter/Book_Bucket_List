@@ -69,7 +69,7 @@ header > h1 {
     padding: 0.7rem 1rem 0.7rem 1rem;
     margin-top: 20px; 
     color: #ffff;
-    transition: background-color 0.5s ease-out 50ms
+    transition: background-color ease-out 50ms
 }
 
 .btn-main.btn-main:hover {
@@ -94,7 +94,6 @@ header > h1 {
 
 /* BOOKS INDEX PAGE */
 
-
 .saved-books-container {
     display: flex;
     justify-content: center;
@@ -116,14 +115,29 @@ header > h1 {
     margin-right: 2rem; 
 
 }
+
+.book-card {
+    text-decoration: none;
+    color:#183a1d;
+}
 .book {
     margin: 2rem;
     background-color:#e1eedd;
-    padding: 3rem; 
+    padding: 0.5rem;
     border-radius: 0.2rem;
     font-family: 'Comfortaa', cursive;
     box-shadow: 7px 9px 14px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
-    flex-basis: 0;
+    width: 20%;
+    text-align: center;
+    flex-basis: 1;
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
 }
 
 .book-tags {
@@ -144,17 +158,16 @@ header > h1 {
 } 
 
 
-.card__footer {
+.card__btn-header {
     display: flex;
-    gap: 0.5rem;
+    justify-content: flex-end;
 }
 
 .footer-btn {
-    margin-top: 1rem;
     border: none; 
-    border-radius: 0.3rem;
+    border-radius: 0.1rem;
     font-family: 'Comfortaa', cursive;
-    padding: 0.5rem;
+    padding: 0.3rem 0.4rem 0.3rem 0.4rem;
     font-size: 10px;
     color: white;
 }
@@ -165,6 +178,18 @@ header > h1 {
 
 .trash-btn {
     background-color: red;
+    cursor: pointer;
+}
+
+/* SHOWING INDIVIDAUL BOOK */
+
+.show-individual-book {
+    background-color:rgb(225, 238, 221, 0.5);
+    width: 50%;
+    margin: 5rem auto;
+    padding: 4rem;
+    border-top: solid;
+    border-bottom: solid;
 }
 
 /* ADDING NEW BOOK - HTML PAGE */
@@ -172,4 +197,12 @@ header > h1 {
 .new-book-heading {
     font-family: 'Maven Pro', sans-serif;
     color: #f0a04b;
+}
+
+
+/* AUTHORS INDEX PAGE */
+
+.add-author-form {
+    display: flex;
+    justify-content: center;
 }

@@ -59,11 +59,14 @@ def edit_books(id):
     return render_template('/books/edit.html', all_authors = authors, book = book)
 
 # UPDATE
-@books_blueprint.route('/books/<id>/update', methods=["POST"])
-def books_update(id):
-    book = book_repository.select(id)
-    completed = True if 'completed' in request.form else False
-    book.mark_completed(completed)
+@books_blueprint.route('/books/<id>', methods=["POST"])
+def update_book(id):
+    title = request.form['title']
+    author_id = request.form['author_id']
+    completed = request.form['completed']
+    author = author_repository.select(author_id)
+    book = Book(title, author, completed, id)
+    book_repository.update(book)
     return redirect('/books')
 
 

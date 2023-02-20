@@ -14,5 +14,8 @@
             </div>
             <button class="btn-main">Update Author</a></button> 
         </form>
+        <form class="delete-form" action="/authors/{{ author.id }}/delete" method="POST">
+            <button type="submit" class="footer-btn trash-btn">Delete</button>
+        </form>
     </div>
 {% endblock %}
