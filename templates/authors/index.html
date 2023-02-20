@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="btn-container-author-page">
+    <button class="btn-main"><a href="/authors/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Author</a></button>
+    <button class="btn-main btn-add-book-author-page"><a href="/books/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Book</a></button>
+</div>
 <h1 class="author-page-heading">Authors</h1>
 {% for author in all_authors %}
 <ul class="author-index-page-links">
@@ -9,6 +13,5 @@
     </li>
 </ul>
 {% endfor %}
-<button class="btn-main"><a href="/authors/new"><i class="fa fa-plus" aria-hidden="true"></i></i>Add Author</a></button>
-<button class="btn-main"><a href="/books/new">Add Book</a></button>
+
 {% endblock %}

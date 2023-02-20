@@ -33,6 +33,7 @@ body {
     color: #f0a04b;
     display: flex;
     justify-content: center;
+    font-size: 1.5em;
 }
 
 header > h1 {
@@ -107,6 +108,7 @@ header > h1 {
     text-align: center;
     color: #f0a04b;
     font-family: 'Maven Pro', sans-serif;
+    font-size: 1.2em;
 
 }
 
@@ -220,11 +222,18 @@ header > h1 {
 
 /* AUTHORS INDEX PAGE */
 
+.btn-container-author-page {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
 .author-page-heading {
-    margin-top: 3.3rem;
+    margin-top: 0;
     margin-left: 2rem;
     font-family: 'Maven Pro', sans-serif;
     color:#f0a04b;
+    font-size: 2.4em;
+
 }
 .author-index-page-links {
      list-style: none;
@@ -234,4 +243,8 @@ header > h1 {
    text-decoration: none;
    color:#183a1d;
    font-family: 'Comfortaa', cursive;
+}
+
+.btn-add-book-author-page {
+    margin-right: 1.2rem; 
 }
