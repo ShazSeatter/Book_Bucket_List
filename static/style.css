@@ -163,7 +163,7 @@ header > h1 {
     justify-content: flex-end;
 }
 
-.footer-btn {
+.header-btn {
     border: none; 
     border-radius: 0.1rem;
     font-family: 'Comfortaa', cursive;
@@ -171,6 +171,12 @@ header > h1 {
     font-size: 10px;
     color: white;
 }
+
+.header-btn:hover {
+    background-color:rgba(215, 50, 50)
+}
+
+
 
 .completed-btn {
     background-color: #183a1d;

@@ -55,8 +55,6 @@ def update_author(id):
     return redirect('/authors')
 
 
-# 
-
 # DELETE
 @authors_blueprint.route('/authors/<id>/delete', methods=["POST"])
 def delete_author(id):
