@@ -26,7 +26,6 @@ def select_all():
     return books
 
 
-
 def select(id):
     book = None
     sql = "SELECT * FROM books WHERE id = %s"

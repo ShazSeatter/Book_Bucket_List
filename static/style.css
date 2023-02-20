@@ -190,20 +190,25 @@ header > h1 {
 
 .show-individual-book {
     background-color:rgb(225, 238, 221, 0.5);
-    width: 50%;
-    margin: 5rem auto;
-    padding: 4rem;
-    border-top: solid;
-    border-bottom: solid;
-}
-
-.img {
-    background: url('/static/img/book.jpg');
     width: 30%;
-    height: 30%;
+    margin: 5rem auto;
+    padding: 2rem;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
 }
 
+.book-title-show {
+    font-size: 16px;
+}
 
+.book-author-show {
+    font-size: 14px;
+}
+
+.span-show-book {
+    margin-left: 0.5rem;
+    font-size: 11px;
+}
 /* ADDING NEW BOOK - HTML PAGE */
 
 .new-book-heading {
