@@ -3,7 +3,7 @@
 {% block content %}
 <!-- displaying book cards on page  -->
     <header class="book-page-header">
-        <h1>List of Books</h1>
+        <h1>Library</h1>
     </header>
     <div class="add-book-btn">
         <button class="btn-main"><a href="/books/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Book</a></button>
@@ -17,7 +17,7 @@
             <div class="book grow"><a class="book-card" href="/books/{{book.id}}/show">
                 <div class="card__btn-header">
                     <form class="delete-form" action="/books/{{ book.id }}/delete" method="POST">
-                        <button type="submit" class="header-btn trash-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        <button type="submit" class="header-btn icon-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
                     </form>
                 </div>
 <!-- END - DELETE BTN -->
@@ -38,10 +38,7 @@
                 </a></div>
 
         {% endfor %}
-    <div>
-
-
-
+ 
 </section>
 
 {% endblock %}

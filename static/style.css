@@ -208,7 +208,7 @@ input[type=number] {
 }
 
 
-.trash-btn {
+.icon-btn {
     background-color: rgb(243, 78, 78);
     cursor: pointer;
 }
@@ -398,4 +398,14 @@ select {
 
 .btn-add-book-author-page {
     margin-right: 1.2rem; 
+}
+
+/* TBR PAGE */
+.background {
+    background-color: transparent;
+    color:#183a1d;
+}
+
+.background:hover {
+    background-color:#699370;
 }

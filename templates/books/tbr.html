@@ -2,12 +2,22 @@
 
 {% block content %}
 
-{% for book in all_tbr %}
-    <h3 class="book-tags"><i class="fa fa-book fa-3x"></i></h3> 
-    <p class="book-font-size">{{book.title}}</p>
+<h1 class="tbr-header">TBR</h1>
+    <section class="books-card-section"> 
+        <div class="saved-books-container">
+    {% for book in all_tbr %}
+    
+            <div class="book grow"><a class="book-card" href="/books/{{book.id}}/show"></a>
+                <div class="card__btn-header">
+                <span class="header-btn icon-btn background"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                </div>
+                <h3 class="book-tags"><i class="fa fa-book fa-3x"></i></h3> 
+                <p class="book-font-size">{{book.title}}</p>
 
-    <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
-
-{% endfor %}
-
+             
+                <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
+                
+        </a></div>
+    {% endfor %}
+    </section>
 {% endblock %}
