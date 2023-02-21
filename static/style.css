@@ -409,3 +409,20 @@ select {
 .background:hover {
     background-color:#699370;
 }
+
+.background:visited {
+    color: #183a1d;
+}
+
+
+/* FINISHED PAGE */
+.book-finished-card {
+    padding: 1.5rem;
+}
+
+.completed-page-header {
+    font-family: 'Maven Pro', sans-serif;
+    color:#f0a04b;
+    text-align: center; 
+    font-size: 2.5em;
+}
