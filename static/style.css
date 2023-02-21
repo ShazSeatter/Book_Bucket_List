@@ -227,14 +227,43 @@ input[type=number] {
     border-radius: 0.2rem;
 }
 
-.new-book-heading {
+.new-heading {
     font-family: 'Maven Pro', sans-serif;
     color: #f0a04b;
     margin-top: 2.5rem;
     margin-left: 5.5rem;
 }
 
+.font-size {
+    font-size: 30px; 
+}
 
+.btn-new-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-save {
+    width: 40%;
+    height: 40px;
+    padding: 0;
+}
+
+.btn-add {
+    width: 50%;
+    height: 40px;
+    padding: 0;
+}
+
+#first-name, #last-name, .label-for-edit-author {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    font-size: 16px;
+}
+
+.label-new-author {
+    font-size: 16px;
+}
 input[type=text] {
     appearance: none;
     border: none;
@@ -255,7 +284,6 @@ input[type=text] {
 }
 
 select {
-    /* appearance: none; */
     outline: 0;
     padding: 0.5rem;
     border: none;
@@ -263,6 +291,33 @@ select {
     width: 100%;
 }
 
+
+/* EDITING AUTHOR */
+
+.update-author-heading {
+    font-size:22px;
+    font-family: 'Maven Pro', sans-serif;
+    color: #f0a04b;
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+}
+
+.footer-btn {
+    border: none; 
+    border-radius: 0.3rem;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    margin-top: 20px; 
+    color: #ffff;
+    transition: background-color ease-out 50ms;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-right: 50px;
+}
+
+
+.footer-btn:hover {
+    background-color:rgba(215, 50, 50)
+}
 
 
 /* SHOWING INDIVIDAUL BOOK */

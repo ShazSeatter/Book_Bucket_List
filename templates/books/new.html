@@ -2,7 +2,7 @@
 
 
 {% block content %}
-<h1 class="new-book-heading">Add Book Here</h1>
+<h1 class="new-heading">Add Book Here</h1>
     <div class="add-new-container">
 
         <form action="/books" method="POST">
@@ -26,10 +26,10 @@
             <label class="book-tags" for="checked_out">Completed?</label>
             <input type="checkbox" name="completed" id="completed">
         </div>
-
-        <button class="btn-main" type="submit">Save</button>
-        <button class="btn-main"><a href="/authors/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Author</a></button> 
-
+        <div class="btn-new-container">
+            <button class="btn-main btn-save" type="submit">Save</button>
+            <button class="btn-main btn-add"><a href="/authors/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Author</a></button> 
+        </div>
         </form>
     </div>
 
