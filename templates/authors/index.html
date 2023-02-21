@@ -11,6 +11,9 @@
 <ul class="author-index-page-links">
     <li>
         <a class="author-index-page" href="/authors/{{author.id}}/edit">{{author.full_name()}} <i class="fa fa-pencil" aria-hidden="true"></i></a>
+        {% for book in list_books(author) %}
+          <p>{{book.title}}</p>
+        {% endfor %}
     </li>
 </ul>
 

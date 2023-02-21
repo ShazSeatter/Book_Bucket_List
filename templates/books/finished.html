@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>this is my h1</h1>
+
+{% for book in all_finished %}
+    <h3 class="book-tags"><i class="fa fa-book fa-3x"></i></h3> 
+    <p class="book-font-size">{{book.title}}</p>
+
+    <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
+
+{% endfor %}
+{% endblock %}

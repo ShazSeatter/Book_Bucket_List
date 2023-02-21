@@ -28,5 +28,6 @@ book_repository.save(book_3)
 
 book_repository.select_all()
 
+all_finished_books = book_repository.select_all_finished()
 
 pdb.set_trace()

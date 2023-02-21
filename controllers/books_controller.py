@@ -75,3 +75,16 @@ def update_book(id):
 def delete_book(id):
     book_repository.delete(id)
     return redirect('/books')
+
+# INDEX ALL READ
+
+@books_blueprint.route('/books/finished')
+def finished_books():
+    finished_books = book_repository.select_all_finished()
+    return render_template('/books/finished.html', all_finished = finished_books)
+
+# INDEX ALL TO BE READ - reversed
+@books_blueprint.route('/books/tbr')
+def tbr_books():
+    tbr = book_repository.select_all_tbr()
+    return render_template('/books/tbr.html', all_tbr = tbr)

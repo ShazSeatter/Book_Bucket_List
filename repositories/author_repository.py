@@ -53,7 +53,7 @@ def delete(id):
     run_sql(sql, values)
 
 
-def find_book(author):
+def books(author):
     books = []
     sql = "SELECT * FROM books WHERE author_id = %s"
     values = [author.id]
@@ -61,7 +61,7 @@ def find_book(author):
 
     if results:
         for row in results:
-            book = Book(row['title'], author, row['author_id'], row['completed'],row['id'])
+            book = Book(row['title'], author, row['completed'],row['id'])
             books.append(book)
             print(books)
     return books

@@ -25,19 +25,36 @@ def select_all():
         books.append(book)
     return books
 
-# def select_all_false():
-#     books =[]
+def select_all_finished():
+    finished_books =[]
 
-#     sql = "SELECT * FROM books WHERE completed = %s"
-#     values = [book.completed]
-#     results = run_sql(sql, values)
+    sql = "SELECT * FROM books WHERE completed = %s"
+    values = [True]
+    results = run_sql(sql, values)
 
-#     for row in results:
-#         author = author_repository.select(row['author_id'])
-#         book = Book(row['title'], author, row['completed'], row['id'])
-#         books.append(book)
-#     return books
- 
+    for row in results:
+        author = author_repository.select(row['author_id'])
+        book = Book(row['title'], author, row['completed'], row['id'])
+        finished_books.append(book)
+    return finished_books
+
+def select_all_tbr():
+    tbr_books =[]
+
+    sql = "SELECT * FROM books WHERE completed = %s"
+    values = [False]
+    results = run_sql(sql, values)
+
+    for row in results:
+        author = author_repository.select(row['author_id'])
+        book = Book(row['title'], author, row['completed'], row['id'])
+        tbr_books.append(book)
+
+    return tbr_books
+
+
+
+
 
 def select(id):
     book = None
@@ -52,6 +69,7 @@ def select(id):
 
     return book 
 
+# review
 def update(book):
     sql = "UPDATE books SET (title, author_id, completed) = (%s, %s, %s) WHERE id = %s"
     values = [book.title, book.author.id, book.completed, book.id]

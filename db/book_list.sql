@@ -14,3 +14,4 @@ CREATE TABLE books (
     author_id INT NOT NULL REFERENCES authors(id),
     completed BOOLEAN
 );
+

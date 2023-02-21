@@ -13,7 +13,8 @@ authors_blueprint = Blueprint("authors", __name__)
 @authors_blueprint.route('/authors')
 def authors():
     authors = author_repository.select_all()
-    return render_template('authors/index.html', title = "Authors", all_authors = authors)
+    list_books = author_repository.books
+    return render_template('authors/index.html', list_books = list_books, title = "Authors", all_authors = authors)
 
 
 # CRUD FUNCTIONALITY FOR CREATING NEW AUTHOR 
