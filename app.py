@@ -13,15 +13,10 @@ app.register_blueprint(authors_blueprint)
 
 @app.route('/')
 def home():
-    book = book_repository.select_all()
-    return render_template('index.html', title = "Home", all_books = book)
+    true_book = book_repository.select_all_finished()
+    false_book = book_repository.select_all_tbr()
+    return render_template('index.html', title = "Home", all_true_books = true_book, all_false_books = false_book)
 
-
-
-# @app.route('/')
-# def tbr_count():
-#     books = book_repository.select_all_false()
-#     return render_template('index.html', title = "Home", all_books = books)
 
 if __name__ == '__main__':
     app.run(debug=True)
