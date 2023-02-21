@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect
 from models.book import Book
 from models.author import Author
 
+import string
 import repositories.book_repository as book_repository
 import repositories.author_repository as author_repository
 
@@ -38,7 +39,8 @@ def create_book():
     title = request.form['title']
     author = author_repository.select(request.form['author_id'])
     completed = True if 'completed' in request.form else False
-    book = Book(title, author, completed)
+    cap_title = string.capwords(title)
+    book = Book(cap_title, author, completed)
     book_repository.save(book)
     return redirect('/books')
 
@@ -64,8 +66,9 @@ def update_book(id):
     title = request.form['title']
     author_id = request.form['author_id']
     completed = request.form['completed']
+    cap_title = string.capwords(title)
     author = author_repository.select(author_id)
-    book = Book(title, author, completed, id)
+    book = Book(cap_title, author, completed, id)
     book_repository.update(book)
     return redirect('/books')
 

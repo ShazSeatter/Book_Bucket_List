@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from models.author import Author
 
+import string
 import repositories.author_repository as author_repository
 import repositories.book_repository as book_repository
 
@@ -33,7 +34,9 @@ def new_author():
 def create_author():
    first_name = request.form['first-name']
    last_name = request.form['last-name']
-   author = Author(first_name, last_name)
+   cap_first = string.capwords(first_name)
+   cap_last = string.capwords(last_name)
+   author = Author(cap_first, cap_last)
    author_repository.save(author)
    return redirect('/authors')
 
@@ -51,7 +54,9 @@ def edit_authors(id):
 def update_author(id):
     first_name = request.form['first-name']
     last_name = request.form['last-name']
-    author = Author(first_name, last_name, id)
+    cap_first = string.capwords(first_name)
+    cap_last = string.capwords(last_name)
+    author = Author(cap_first, cap_last, id)
     author_repository.update(author)
     return redirect('/authors')
 

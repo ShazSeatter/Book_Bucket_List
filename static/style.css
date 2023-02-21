@@ -117,139 +117,135 @@ input[type=number] {
 
 
 /* BOOKS INDEX PAGE */
+    .header-nav {
+        margin-right: 2rem;
+    }
 
-.header-nav {
-    margin-right: 2rem;
-}
+    .header-nav-links {
+        display: flex; 
+        justify-content: flex-end;
+        gap: 5rem;
+    }
 
-.header-nav-links {
-    display: flex; 
-    justify-content: flex-end;
-    gap: 5rem;
-}
+    .header-nav-links, .header-nav-links > li > a {
+        text-decoration: none;
+        list-style: none;
+    }
 
-.header-nav-links, .header-nav-links > li > a {
-    text-decoration: none;
-    list-style: none;
-}
+    .header-nav-links, .header-nav-links > li > a:hover {
+        list-style: none;
+        color:#183a1d;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
 
-.header-nav-links, .header-nav-links > li > a:hover {
-    list-style: none;
-    color:#183a1d;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-}
+    .header-nav-links, .header-nav-links > li > a:visited {
+        text-decoration: none;
+        list-style: none;
+        color:#183a1d
+    }
 
-.header-nav-links, .header-nav-links > li > a:visited {
-    text-decoration: none;
-    list-style: none;
-    color:#183a1d
-}
+    .header-nav-links > li > a:hover {
+        text-decoration: underline;
+        color: white;
+        cursor: pointer;
+        background-color: #304933;
+        border-radius: 0.5rem;
+    }
 
-.header-nav-links > li > a:hover {
-    text-decoration: underline;
-    color: white;
-    cursor: pointer;
-    background-color: #304933;
-    border-radius: 0.5rem;
-}
+    .saved-books-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
 
-.saved-books-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
+    }
 
-}
+    .book-page-header {
+        text-align: center;
+        color: #f0a04b;
+        font-family: 'Maven Pro', sans-serif;
+        font-size: 1.2em;
 
-.book-page-header {
-    text-align: center;
-    color: #f0a04b;
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 1.2em;
+    }
 
-}
+    .add-book-btn {
+        display: flex; 
+        justify-content: flex-end;
+        margin-right: 2rem; 
 
-.add-book-btn {
-    display: flex; 
-    justify-content: flex-end;
-    margin-right: 2rem; 
+    }
 
-}
+    .book-card {
+        text-decoration: none;
+        color:#183a1d;
+    }
 
-.book-card {
-    text-decoration: none;
-    color:#183a1d;
-}
+    .book {
+        margin: 2rem;
+        background-color:#e1eedd;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        font-family: 'Comfortaa', cursive;
+        box-shadow: 7px 9px 14px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+        width: 20%;
+        text-align: center;
+        flex-basis: 1;
+    }
 
-.book {
-    margin: 2rem;
-    background-color:#e1eedd;
-    padding: 0.5rem;
-    border-radius: 0.2rem;
-    font-family: 'Comfortaa', cursive;
-    box-shadow: 7px 9px 14px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
-    width: 20%;
-    text-align: center;
-    flex-basis: 1;
-}
+    .grow {
+        transition: all .2s ease-in-out;
+    }
 
-.grow {
-    transition: all .2s ease-in-out;
-}
+    .grow:hover {
+        transform: scale(1.1);
+    }
 
-.grow:hover {
-    transform: scale(1.1);
-}
+    .book-tags {
+        color:#183a1d;
+        margin: 0.5rem 0 0.5rem 0;
+        font-size: 16px;
 
-.book-tags {
-    color:#183a1d;
-    margin: 0.5rem 0 0.5rem 0;
-    font-size: 16px;
+    }
 
-}
-
-.book-font-size {
-    font-size: 14px;
-    line-height: 20px;
-}
-
-
-.extra-margin {
-    margin-top: 2rem; 
-} 
+    .book-font-size {
+        font-size: 14px;
+        line-height: 20px;
+    }
 
 
-.card__btn-header {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.header-btn {
-    border: none; 
-    border-radius: 0.1rem;
-    font-family: 'Comfortaa', cursive;
-    padding: 0.3rem 0.4rem 0.3rem 0.4rem;
-    font-size: 10px;
-    color: white;
-}
-
-.icon-btn {
-    background-color: rgb(243, 78, 78);
-    cursor: pointer;
-}
-
-.header-btn:hover {
-    background-color:rgba(215, 50, 50)
-}
+    .extra-margin {
+        margin-top: 2rem; 
+    } 
 
 
-.completed-status {
-    margin-top: 0.5rem;
-}
+    .card__btn-header {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header-btn {
+        border: none; 
+        border-radius: 0.1rem;
+        font-family: 'Comfortaa', cursive;
+        padding: 0.3rem 0.4rem 0.3rem 0.4rem;
+        font-size: 10px;
+        color: white;
+    }
+
+    .icon-btn {
+        background-color: rgb(243, 78, 78);
+        cursor: pointer;
+    }
+
+    .header-btn:hover {
+        background-color:rgba(215, 50, 50)
+    }
 
 
-
+    .completed-status {
+        margin-top: 0.5rem;
+    }
 
 /* ADDING A NEW BOOK / NEW AUTHOR */
 
