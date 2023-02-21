@@ -234,6 +234,11 @@ input[type=number] {
     color: white;
 }
 
+.icon-btn {
+    background-color: rgb(243, 78, 78);
+    cursor: pointer;
+}
+
 .header-btn:hover {
     background-color:rgba(215, 50, 50)
 }
@@ -244,10 +249,7 @@ input[type=number] {
 }
 
 
-.icon-btn {
-    background-color: rgb(243, 78, 78);
-    cursor: pointer;
-}
+
 
 /* ADDING A NEW BOOK / NEW AUTHOR */
 
@@ -348,8 +350,12 @@ select {
     transition: background-color ease-out 50ms;
     font-family: 'Josefin Sans', sans-serif;
     padding-right: 50px;
+    background-color:rgb(243, 78, 78);
 }
 
+.footer-btn:hover {
+    background-color:rgba(215, 50, 50);
+}
 .warning {
     margin-top: 1rem;
     font-size: 14px;
@@ -357,9 +363,7 @@ select {
     line-height: 1.5;
 }
 
-.footer-btn:hover {
-    background-color:rgba(215, 50, 50)
-}
+
 
 /* EDITING BOOK */
 
@@ -434,6 +438,15 @@ select {
 
 .btn-add-book-author-page {
     margin-right: 1.2rem; 
+}
+
+.author-ul-list {
+    margin-top: 1rem;
+}
+.author-book-list {
+   list-style:square;
+   color:#304933;
+   font-family: 'Comfortaa', cursive;
 }
 
 /* TBR PAGE */
