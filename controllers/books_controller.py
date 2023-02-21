@@ -32,6 +32,7 @@ def new_book():
     authors = author_repository.select_all()
     return render_template("books/new.html",title = "Add Book", all_authors = authors)
 
+
 # CREATE
 # POST '/books'
 @books_blueprint.route('/books', methods=['POST'])
@@ -43,6 +44,7 @@ def create_book():
     book = Book(cap_title, author, completed)
     book_repository.save(book)
     return redirect('/books')
+
 
 # SHOW
 # GET '/books/<id>
@@ -60,17 +62,21 @@ def edit_books(id):
     book = book_repository.select(id)
     return render_template('/books/edit.html', title = "Edit Book", all_authors = authors, book = book)
 
+
+
 # UPDATE
 @books_blueprint.route('/books/<id>', methods=["POST"])
 def update_book(id):
     title = request.form['title']
     author_id = request.form['author_id']
     completed = request.form['completed']
+    # review = request.form['review']
     cap_title = string.capwords(title)
     author = author_repository.select(author_id)
     book = Book(cap_title, author, completed, id)
     book_repository.update(book)
     return redirect('/books')
+
 
 
 # DELETE
@@ -79,8 +85,8 @@ def delete_book(id):
     book_repository.delete(id)
     return redirect('/books')
 
-# INDEX ALL READ
 
+# INDEX ALL READ
 @books_blueprint.route('/books/finished')
 def finished_books():
     finished_books = book_repository.select_all_finished()

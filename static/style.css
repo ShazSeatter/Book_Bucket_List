@@ -471,3 +471,8 @@ select {
     text-align: center; 
     font-size: 2.5em;
 }
+
+
+textarea {
+    display: hidden; 
+}

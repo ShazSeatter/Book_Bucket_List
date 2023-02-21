@@ -61,7 +61,7 @@ def books(author):
 
     if results:
         for row in results:
-            book = Book(row['title'], author, row['completed'],row['id'])
+            book = Book(row['title'], author, row['completed'], row['review'], row['id'])
             books.append(book)
             print(books)
     return books

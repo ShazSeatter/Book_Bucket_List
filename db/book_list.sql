@@ -12,6 +12,7 @@ CREATE TABLE books (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255),
     author_id INT NOT NULL REFERENCES authors(id),
-    completed BOOLEAN
+    completed BOOLEAN,
+    review TEXT
 );
 

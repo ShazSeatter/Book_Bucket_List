@@ -23,7 +23,7 @@ book_repository.save(book_1)
 book_2 = Book("Things We Hide From The Light", author_2)
 book_repository.save(book_2)
 
-book_3 = Book("Things We Never Got Over", author_2, True)
+book_3 = Book("Things We Never Got Over", author_2, True, "Review Test")
 book_repository.save(book_3)
 
 book_repository.select_all()
