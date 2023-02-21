@@ -118,6 +118,42 @@ input[type=number] {
 
 /* BOOKS INDEX PAGE */
 
+.header-nav {
+    margin-right: 2rem;
+}
+
+.header-nav-links {
+    display: flex; 
+    justify-content: flex-end;
+    gap: 5rem;
+}
+
+.header-nav-links, .header-nav-links > li > a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.header-nav-links, .header-nav-links > li > a:hover {
+    list-style: none;
+    color:#183a1d;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.header-nav-links, .header-nav-links > li > a:visited {
+    text-decoration: none;
+    list-style: none;
+    color:#183a1d
+}
+
+.header-nav-links > li > a:hover {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+    background-color: #304933;
+    border-radius: 0.5rem;
+}
+
 .saved-books-container {
     display: flex;
     justify-content: center;
