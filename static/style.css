@@ -314,12 +314,30 @@ select {
     padding-right: 50px;
 }
 
+.warning {
+    margin-top: 1rem;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.5;
+}
 
 .footer-btn:hover {
     background-color:rgba(215, 50, 50)
 }
 
+/* EDITING BOOK */
 
+.container-margin {
+    margin-top: 4rem;
+}
+.label-for-edit-book {
+    font-size: 16px;
+}
+
+.margin-book-edit {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
 /* SHOWING INDIVIDAUL BOOK */
 
 .show-individual-book {
@@ -346,6 +364,11 @@ select {
 
 
 /* AUTHORS INDEX PAGE */
+
+.container-index-author-page {
+    width: 82%;
+    margin-left: 100px;  
+}
 
 .btn-container-author-page {
     display: flex;

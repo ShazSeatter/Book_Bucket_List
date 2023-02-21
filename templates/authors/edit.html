@@ -19,6 +19,7 @@
             <form class="delete-form" action="/authors/{{ author.id }}/delete" method="POST">
                 <button type="submit" class="footer-btn trash-btn"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
             </form>
+            <p class="warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Warning! Authors cannot be deleted if they are in use!</p>
     </div>
 
 {% endblock %}
