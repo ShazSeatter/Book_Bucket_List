@@ -35,7 +35,7 @@ def select_all_finished():
 
     for row in results:
         author = author_repository.select(row['author_id'])
-        book = Book(row['title'], author, row['completed'], row['id'])
+        book = Book(row['title'], author, row['completed'], row['notes'], row['id'])
         finished_books.append(book)
     return finished_books
 
@@ -48,7 +48,7 @@ def select_all_tbr():
 
     for row in results:
         author = author_repository.select(row['author_id'])
-        book = Book(row['title'], author, row['completed'], row['id'])
+        book = Book(row['title'], author, row['completed'], row['notes'], row['id'])
         tbr_books.append(book)
 
     return tbr_books
