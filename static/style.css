@@ -359,8 +359,6 @@ select {
     line-height: 1.5;
 }
 
-
-
 /* EDITING BOOK */
 
 .container-margin {
@@ -374,6 +372,10 @@ select {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
+/* textarea {
+    resize: none; 
+} */
 /* SHOWING INDIVIDAUL BOOK */
 
 .show-individual-book {
@@ -470,9 +472,4 @@ select {
     color:#f0a04b;
     text-align: center; 
     font-size: 2.5em;
-}
-
-
-textarea {
-    display: hidden; 
 }

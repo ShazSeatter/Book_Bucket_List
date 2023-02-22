@@ -64,6 +64,12 @@ def update_author(id):
 # DELETE
 @authors_blueprint.route('/authors/<id>/delete', methods=["POST"])
 def delete_author(id):
-    # book = author_repository.books(id)
     author_repository.delete(id)
     return redirect('/authors')
+    # # books_with_author = author_repository.books(author)
+    # author_empty = author_repository.delete(id) # this will automatically delete an author with no book, 
+    # # does not delete authors with books
+    # authors_with_books = author_repository.books(author)
+    # return render_template('authors/index.html', authors_with_books = authors_with_books)
+    # return redirect('/authors')
+    # # return render_template('authors/index.html', books_author = books_with_author, author_empty = author_empty)

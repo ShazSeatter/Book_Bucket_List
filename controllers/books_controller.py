@@ -54,6 +54,7 @@ def show_book(id):
     return render_template('books/show.html', title = "Chosen Book", book = book)
 
 
+
 # EDIT
 # GET 'books/<id>/edit'
 @books_blueprint.route('/books/<id>/edit')
@@ -63,17 +64,16 @@ def edit_books(id):
     return render_template('/books/edit.html', title = "Edit Book", all_authors = authors, book = book)
 
 
-
 # UPDATE
 @books_blueprint.route('/books/<id>', methods=["POST"])
 def update_book(id):
     title = request.form['title']
     author_id = request.form['author_id']
     completed = request.form['completed']
-    # review = request.form['review']
+    notes = request.form['notes']
     cap_title = string.capwords(title)
     author = author_repository.select(author_id)
-    book = Book(cap_title, author, completed, id)
+    book = Book(cap_title, author, completed, notes, id)
     book_repository.update(book)
     return redirect('/books')
 

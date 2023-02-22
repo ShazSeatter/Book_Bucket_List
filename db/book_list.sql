@@ -13,6 +13,6 @@ CREATE TABLE books (
     title VARCHAR(255),
     author_id INT NOT NULL REFERENCES authors(id),
     completed BOOLEAN,
-    review TEXT
+    notes TEXT
 );
 
