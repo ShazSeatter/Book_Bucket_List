@@ -45,14 +45,6 @@ header > h1 {
     font-weight: 700;
 }
 
-input[type=number] {
-    appearance: none;
-    border: none;
-    background-color: #e1eedd;
-    padding: 10px 10px 10px 0px;
-    width: 103px;
-}
-
 .container {
     display: flex;
     justify-content: center;
@@ -115,6 +107,19 @@ input[type=number] {
     margin-top: 3rem;
 }
 
+
+h4 {
+    margin-left: 2.5rem;
+}
+
+.back-btn {
+    text-decoration: none;
+    color:#304933; 
+}
+
+.back-btn:hover {
+    font-style:italic;
+}
 
 /* BOOKS INDEX PAGE */
     .header-nav {
@@ -362,10 +367,10 @@ select {
 /* EDITING BOOK */
 
 .container-margin {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 .label-for-edit-book {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .margin-book-edit {
@@ -373,9 +378,12 @@ select {
     margin-bottom: 0.5rem;
 }
 
-/* textarea {
+
+textarea {
     resize: none; 
-} */
+    width: 100%;
+    margin-top: 1rem;
+}
 /* SHOWING INDIVIDAUL BOOK */
 
 .show-individual-book {

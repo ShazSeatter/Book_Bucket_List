@@ -2,7 +2,8 @@
 
 {% block content %}
 
-<div class="add-new-container container-margin">
+<h4><a class="back-btn" href="/books/{{book.id}}/show"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a></h4>
+<div class="add-new-container container-margin container-update">
     <h3 class="update-author-heading">Update Book Details</h3>
     <form action="/books/{{book.id}}" method="POST">
         <div>
