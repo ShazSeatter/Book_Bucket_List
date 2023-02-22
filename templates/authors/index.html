@@ -1,25 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h4><a class="back-btn" href="/books"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a></h4>
-<div class="container-index-author-page">
-<div class="btn-container-author-page">
-    <button class="btn-main"><a href="/authors/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Author</a></button>
-    <button class="btn-main btn-add-book-author-page"><a href="/books/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Book</a></button>
-</div>
-<h1 class="author-page-heading">Authors</h1>
-{% for author in all_authors %}
-<ul class="author-index-page-links">
-    <li>
-        <a class="author-index-page" href="/authors/{{author.id}}/edit"><strong>{{author.full_name()}}</strong> <i class="fa fa-pencil" aria-hidden="true"></i></a>
-        {% for book in list_books(author) %}
-          <ul class="author-ul-list">
-            <li class="author-book-list">{{book.title}}</li>
-        </ul>
-        {% endfor %}
-    </li>
-</ul>
 
-{% endfor %}
-</div>
+    <h4><a class="back-btn" href="/books"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a></h4>
+        <div class="container-index-author-page">
+            <div class="btn-container-author-page">
+                <button class="btn-main"><a href="/authors/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Author</a></button>
+                <button class="btn-main btn-add-book-author-page"><a href="/books/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Book</a></button>
+            </div>
+
+            <h1 class="author-page-heading">Authors</h1>
+
+            {% for author in all_authors %}
+                <ul class="author-index-page-links">
+                    <li>
+                        <a class="author-index-page" href="/authors/{{author.id}}/edit"><strong>{{author.full_name()}}</strong> <i class="fa fa-pencil" aria-hidden="true"></i></a>
+                {% for book in list_books(author) %}
+                    <ul class="author-ul-list">
+                        <li class="author-book-list">{{book.title}}</li>
+                    </ul>
+                {% endfor %}
+        <!-- ending li and ul tags part of author-index-page-links -->
+                    </li>
+                </ul>
+
+            {% endfor %}
+
+        </div>
+
 {% endblock %}

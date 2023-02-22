@@ -11,11 +11,11 @@
         </nav>
         <h1>Library</h1>
     </header>
+
     <div class="add-book-btn">
         <button class="btn-main"><a href="/books/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Book</a></button>
-        <!-- <button class="btn-main"><a href="/books/finished"><i class="fa fa-plus" aria-hidden="true"></i> See Completed</a></button>
-        <button class="btn-main"><a href="/books/tbr"><i class="fa fa-plus" aria-hidden="true"></i> See TBR</a></button> -->
     </div>
+
     <section class="books-card-section"> 
         <div class="saved-books-container">
             {% for book in all_books %}
@@ -39,12 +39,12 @@
                             <span>still TBR... <i class="fa fa-hourglass-o" aria-hidden="true"></i></span>
                         {% endif %} 
                     </div>
- 
+
                 </a></div>
 
         {% endfor %}
- 
-</section>
+
+    </section>
 
 {% endblock %}
 

@@ -6,30 +6,30 @@
     <div class="add-new-container">
 
         <form action="/books" method="POST">
-    
-        <div>
-            <label class="book-tags" for="title">Title:</label>
-            <input type="text" class="title-input" name="title" id="title" placeholder="Title" required autofocus>
-        </div>
+
+            <div>
+                <label class="book-tags" for="title">Title:</label>
+                <input type="text" class="title-input" name="title" id="title" placeholder="Title" required autofocus>
+            </div>
 
 
-        <div class="add-author-select">
-            <label class="book-tags" for="author">Author:</label>
-            <select name="author_id" id="author">
-                {% for author in all_authors %}
-                    <option value="{{ author.id }}">{{ author.full_name() }}</option>
-                {% endfor %}
-            </select>
-        </div>
+            <div class="add-author-select">
+                <label class="book-tags" for="author">Author:</label>
+                <select name="author_id" id="author">
+                    {% for author in all_authors %}
+                        <option value="{{ author.id }}">{{ author.full_name() }}</option>
+                    {% endfor %}
+                </select>
+            </div>
 
-        <div>
-            <label class="book-tags" for="checked_out">Completed?</label>
-            <input type="checkbox" name="completed" id="completed">
-        </div>
-        <div class="btn-new-container">
-            <button class="btn-main btn-save" type="submit">Save</button>
-            <button class="btn-main btn-add"><a href="/authors/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Author</a></button> 
-        </div>
+            <div>
+                <label class="book-tags" for="checked_out">Completed?</label>
+                <input type="checkbox" name="completed" id="completed">
+            </div>
+            <div class="btn-new-container">
+                <button class="btn-main btn-save" type="submit">Save</button>
+                <button class="btn-main btn-add"><a href="/authors/new"><i class="fa fa-plus" aria-hidden="true"></i> Add Author</a></button> 
+            </div>
         </form>
     </div>
 

@@ -2,21 +2,23 @@
 
 
 {% block content %}
-<h4><a class="back-btn" href="/authors"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a></h4>
-<form action="/authors" method="post">
-    <h4 class="new-heading font-size">Add Author Here</h4>
-    <div class="add-new-container">
-    <div>
-        <label for="first-name" class="label-new-author">First Name:</label>
-        <input type="text" name="first-name" id="first-name" placeholder="First Name(s)" required autofocus>
-    </div>
 
-    <div>
-        <label for="last-name" class="label-new-author">Last Name:</label>
-        <input type="text" name="last-name" id="last-name" placeholder="Last Name" required autofocus>
-    </div>
+    <h4><a class="back-btn" href="/authors"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a></h4>
+        <form action="/authors" method="post">
+            <h4 class="new-heading font-size">Add Author Here</h4>
+                <div class="add-new-container">
+                        <div>
+                            <label for="first-name" class="label-new-author">First Name:</label>
+                            <input type="text" name="first-name" id="first-name" placeholder="First Name(s)" required autofocus>
+                        </div>
 
-    <button class="btn-main" type="submit">Save</button>
-</div>
-</form>
+                        <div>
+                            <label for="last-name" class="label-new-author">Last Name:</label>
+                            <input type="text" name="last-name" id="last-name" placeholder="Last Name" required autofocus>
+                        </div>
+
+                    <button class="btn-main" type="submit">Save</button>
+                </div>
+        </form>
+
 {% endblock %}

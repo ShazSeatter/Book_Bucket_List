@@ -4,7 +4,7 @@ from models.book import Book
 class TestBook (unittest.TestCase):
 
     def setUp(self): 
-        self.book = Book("Undoctored", "Adam Kay", False, 2)
+        self.book = Book("Undoctored", "Adam Kay", False, "still to be read", 2)
 
     def test_book_has_title(self):
         expected = "Undoctored"
@@ -27,12 +27,17 @@ class TestBook (unittest.TestCase):
         actual = self.book.completed
         self.assertEqual(expected, actual)
 
+    def test_has_note(self):
+        self.book = Book("Undoctored", "Adam Kay", False, "Book is great", 2)
+        expected = "Book is great"
+        actual = self.book.notes
+        self.assertEqual(expected, actual)
+
     def test_has_id(self):
         expected = 2
         actual = self.book.id
         self.assertEqual(expected, actual)
 
-    
     def test_has_no_id(self):
         self.book = Book("Undoctored", "Adam Kay")
         expected = None

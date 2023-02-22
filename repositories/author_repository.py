@@ -65,6 +65,3 @@ def books(author):
             books.append(book)
             print(books)
     return books
-
-#  The above returns a list that contains books with an author id
-# upon testing, this will return either an empty list or a list with books that have an author 

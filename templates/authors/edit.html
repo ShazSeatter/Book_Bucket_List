@@ -2,6 +2,7 @@
 
 
 {% block content %}
+
 <h4><a class="back-btn" href="/authors"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a></h4>
     <div class="add-new-container">
         <h3 class="update-author-heading">Update Author Details</h3>
@@ -17,9 +18,11 @@
                 <button class="btn-main">Update Author</a></button>
 
             </form>
+
             <form class="delete-form" action="/authors/{{ author.id }}/delete" method="POST">
                 <button type="submit" class="footer-btn trash-btn"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
             </form>
+
     </div>
 
 {% endblock %}

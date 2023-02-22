@@ -2,39 +2,42 @@
 
 {% block content %}
 
-<h4><a class="back-btn" href="/books/{{book.id}}/show"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a></h4>
-<div class="add-new-container container-margin container-update">
-    <h3 class="update-author-heading">Update Book Details</h3>
-    <form action="/books/{{book.id}}" method="POST">
-        <div>
-            <label for="title"  class="label-for-edit-book">Title:</label>
-            <input class="margin-book-edit" type="text" id="title" name="title" value="{{book.title}}" required autofocus>
-        </div>
-        <div>
-            <label for="author"  class="label-for-edit-book">Author:</label>
-            <select name="author_id" id="author" class="margin-book-edit">
-                {% for author in all_authors %}
-                    <option value="{{ author.id }}"
-                        {% if book.author.id == author.id %} selected="selected" {% endif %}>
-                        {{ author.full_name()}}
-                    </option>
-                {% endfor %}
-            </select>
-        </div>
-        <div>
-            <label for="completed"  class="label-for-edit-book">Completed?</label>
-            <select name="completed" id="completed" class="margin-book-edit">
-                <option value="true" {% if book.completed == True %}
-                selected = "selected"{% endif %}>Yes</option>
-                <option value="false" {% if book.completed == False %} selected="selected"{% endif %}>
-                    No, still TBR
-                </option>
-            </select>
-        </div>
+    <h4><a class="back-btn" href="/books/{{book.id}}/show"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a></h4>
+        <div class="add-new-container container-margin container-update">
+            <h3 class="update-author-heading">Update Book Details</h3>
 
-        <textarea name="notes" id="notes" cols="30" rows="10"  placeholder="Leave any thoughts you have here!">{% if book.notes != None %}{{book.notes}}{% endif %}</textarea>
-            <button class="btn-main">Update Book</a></button> 
-    </form>
-</div>
+            <form action="/books/{{book.id}}" method="POST">
+                <div>
+                    <label for="title"  class="label-for-edit-book">Title:</label>
+                    <input class="margin-book-edit" type="text" id="title" name="title" value="{{book.title}}" required autofocus>
+                </div>
+
+                <div>
+                    <label for="author"  class="label-for-edit-book">Author:</label>
+                    <select name="author_id" id="author" class="margin-book-edit">
+                        {% for author in all_authors %}
+                            <option value="{{ author.id }}"
+                                {% if book.author.id == author.id %} selected="selected" {% endif %}>
+                                {{ author.full_name()}}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div>
+                    <label for="completed"  class="label-for-edit-book">Completed?</label>
+                    <select name="completed" id="completed" class="margin-book-edit">
+                        <option value="true" {% if book.completed == True %}
+                        selected = "selected"{% endif %}>Yes</option>
+                        <option value="false" {% if book.completed == False %} selected="selected"{% endif %}>
+                            No, still TBR
+                        </option>
+                    </select>
+                </div>
+
+                <textarea name="notes" id="notes" cols="30" rows="10"  placeholder="Leave any thoughts you have here!">{% if book.notes != None %}{{book.notes}}{% endif %}</textarea>
+                <button class="btn-main">Update Book</a></button> 
+            </form>
+        </div>
 
 {% endblock %}

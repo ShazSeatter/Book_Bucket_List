@@ -68,7 +68,7 @@ def select(id):
     return book 
 
 
-# review
+# notes - added
 def update(book):
     sql = "UPDATE books SET (title, author_id, completed, notes) = (%s, %s, %s, %s) WHERE id = %s"
     values = [book.title, book.author.id, book.completed, book.notes, book.id]

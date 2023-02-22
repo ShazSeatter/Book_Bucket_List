@@ -1,23 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h4><a class="back-btn" href="/books"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a></h4>
-<h1 class="completed-page-header">TBR</h1>
-    <section class="books-card-section"> 
-        <div class="saved-books-container">
-    {% for book in all_tbr %}
+    <h4><a class="back-btn" href="/books"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a></h4>
+        <h1 class="completed-page-header">TBR</h1>
+            <section class="books-card-section"> 
+                <div class="saved-books-container">
+                    {% for book in all_tbr %}
     
-            <div class="book grow">
-                <div class="card__btn-header">
-                <span class="header-btn icon-btn background"><a class="background" href="/books/{{book.id}}/edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></span>
-                </div>
-                <h3 class="book-tags"><i class="fa fa-book fa-3x"></i></h3> 
-                <p class="book-font-size">{{book.title}}</p>
-
-             
-                <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
+                        <div class="book grow">
+                            <div class="card__btn-header">
+                                <span class="header-btn icon-btn background"><a class="background" href="/books/{{book.id}}/edit"><i class="fa fa-pencil" aria-hidden="true"></i></a></span>
+                            </div>
                 
-        </a></div>
-    {% endfor %}
-    </section>
+                            <h3 class="book-tags"><i class="fa fa-book fa-3x"></i></h3> 
+                            <p class="book-font-size">{{book.title}}</p>
+                            <span class="book-font-size"> by <i>{{book.author.full_name()}}</i></span>
+                
+                </div>
+                    {% endfor %}
+            </section>
 {% endblock %}
