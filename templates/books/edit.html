@@ -30,22 +30,10 @@
                 </option>
             </select>
         </div>
-       
-        <textarea name="notes" id="notes" cols="30" rows="10" placeholder="Leave any thoughts you have here!"></textarea>
+
+        <textarea name="notes" id="notes" cols="30" rows="10"  placeholder="Leave any thoughts you have here!">{% if book.notes != None %}{{book.notes}}{% endif %}</textarea>
             <button class="btn-main">Update Book</a></button> 
     </form>
 </div>
 
 {% endblock %}
-
-
-
-<!-- can be seperate form beneath -->
-<!-- I want the form to redirect to the books/<id>/show page -->
-<!-- <a href="/books/{{book.id}}/edit"></a> pathway to show editing --> 
-<!-- <form>
-        <label>Add Review</label>
-        <textarea>review text goes here</textarea>
-        <input type="submit">
-    </form> 
--->

@@ -389,10 +389,12 @@ select {
 
 .book-title-show {
     font-size: 16px;
+    color:#183a1d; 
 }
 
 .book-author-show {
     font-size: 14px;
+    color:#183a1d;
 }
 
 .span-show-book {
@@ -400,6 +402,20 @@ select {
     font-size: 11px;
 }
 
+.title-notes {
+    font-size: 14px; 
+    margin-bottom: 0.2rem;
+    margin-top: 2.5rem;
+}
+
+.notes-section {
+    color:#183a1d; 
+}
+
+.notes {
+    font-size: 12px;
+    margin-top: 0.5rem;
+}
 /* AUTHORS INDEX PAGE */
 
 .container-index-author-page {
