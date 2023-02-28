@@ -39,6 +39,15 @@ def select_all_finished():
         finished_books.append(book)
     return finished_books
 
+# Return list of all books that are marked as true
+# Need an empty list to start of with - to be able to 'select all' from new list 
+# Select all values in books table that has the value of True (as this means books is completed, as per the table column)
+# Get the values from the results from sql
+# Add those values to the empty list - for loop
+# Return new list with values obtained from sql database - then use in controller to use data 
+
+
+
 def select_all_tbr():
     tbr_books =[]
 
