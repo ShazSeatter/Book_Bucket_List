@@ -11,12 +11,6 @@ class TestBook (unittest.TestCase):
         actual = self.book.title
         self.assertEqual(expected, actual)
 
-
-    def test_book_has_author(self):
-        expected = "Adam Kay"
-        actual = self.book.author
-        self.assertEqual(expected, actual)
-
     def test_book_has_author(self):
         expected = "Adam Kay"
         actual = self.book.author
