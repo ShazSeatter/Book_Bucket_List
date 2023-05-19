@@ -1,3 +1,7 @@
+# Introduction
+
+First solo 1 week duration project for CodeClan's professional development course. 
+
 # Brief 
 
 <h3><b> Book Tracker Project </b></h3>
@@ -38,11 +42,13 @@ Must NOT use:
 
 
 # Technologies Used
-
-- HTML / CSS
-- Python
-- Flask
-- PostgreSQL and the psycopg
+<p>
+<img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" width="50" height="50">
+<img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" width="50" height="50">
+<img src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" width="50" height="50">
+<img src="https://user-images.githubusercontent.com/25181517/183423775-2276e25d-d43d-4e58-890b-edbc88e915f7.png" width="50" height="50">
+<img src="https://user-images.githubusercontent.com/25181517/117208740-bfb78400-adf5-11eb-97bb-09072b6bedfc.png" width="50" height="50">
+</p>
 
 
 # Running Instructions
