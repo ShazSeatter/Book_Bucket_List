@@ -45,7 +45,7 @@ Must NOT use:
 - PostgreSQL and the psycopg
 
 
-# Running Instrictions
+# Running Instructions
 
 1. Clone and enter git repository 
 ```` terminal 
